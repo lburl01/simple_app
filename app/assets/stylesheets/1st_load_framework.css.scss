@@ -12,6 +12,14 @@ img {
   font-size: inherit;
   }
 
+#top-margin {
+  margin-top: 2%;
+}
+
+#buffer {
+  margin-top: 85px;
+}
+
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
 // to make views framework-neutral
@@ -34,6 +42,17 @@ img {
 
 // apply styles to HTML elements
 // to make views framework-neutral
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: seagreen; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, seagreen, aquamarine); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, seagreen, aquamarine); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, seagreen, aquamarine); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, seagreen, aquamarine); /* Standard syntax */
+}
+
 main {
   @extend .container;
   margin-top: 30px; // accommodate the navbar
@@ -52,23 +71,51 @@ section {
   max-width: 320px;
   margin: 0 auto;
 }
+.authform a {
+  color: white;
+}
 .authform form {
+  background-color: rgba(255, 255, 255, .3);
   @extend .card;
-  @extend .col-md-9;
-  padding-bottom: 40px;
+  @extend .col-lg-9;
+  min-width: 320px;
+  padding: 40px 20px;
   @extend .bg-faded;
-  @extend .small;
 }
 .authform .right {
   float: right !important;
 }
 .authform .button {
-  @extend .btn;
-  @extend .btn-primary;
+  // @extend .btn;
+  // @extend .btn-primary;
+  border: 2px solid white;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: white;
+}
+.authform label {
+  color: white;
+}
+.authform .button:hover {
+  border: 2px solid white;
+  padding: 5px 10px;
+  background-color: white;
+  color: black;
 }
 .authform fieldset {
   @extend .card;
 }
+
+input[type="email"], input[type="text"],
+input[type="password"], input:focus {
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  border-radius: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
 #error_explanation:not(:empty) {
   @extend .alert;
   @extend .alert-danger;
