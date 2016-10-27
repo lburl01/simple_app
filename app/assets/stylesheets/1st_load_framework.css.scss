@@ -8,9 +8,11 @@ img {
   margin: 0 auto;
 }
 // override for the 'Home' navigation link
-.navbar-brand {
-  font-size: inherit;
-  }
+
+h2 {
+  color: white;
+  margin-bottom: 20px;
+}
 
 #top-margin {
   margin-top: 2%;
@@ -21,7 +23,7 @@ img {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: rgb(51,0,114);
   padding: 0px;
   margin: 0px;
 }
@@ -64,6 +66,23 @@ main {
 .homepage {
   @extend .col-md-9;
   @extend .text-xs-center;
+  width: 100%;
+}
+
+.link-to {
+  margin: 5px;
+  padding: 10px 40px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, .3);
+  color: white;
+}
+.link-to:hover {
+  margin: 5px;
+  padding: 10px 40px;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  text-decoration: none;
 }
 
 section {
