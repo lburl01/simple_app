@@ -10,7 +10,9 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <!-- <div id="gradient" /> -->
+    <% if current_page? root_path %>
+      <div id="gradient" />
+    <% end %>
     <header>
       <%= render 'layouts/navigation' %>
     </header>
