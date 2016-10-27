@@ -12,6 +12,14 @@ img {
 h2 {
   color: white;
   margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.navbar-brand {
+  font-weight: 500;
+}
+.navbar {
+  font-weight: 300;
 }
 
 #top-margin {
@@ -26,6 +34,8 @@ body {
   background-color: rgb(51,0,114);
   padding: 0px;
   margin: 0px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
 
 #gradient {
@@ -133,14 +143,29 @@ section {
   @extend .card;
 }
 
+input{
+    color: white;
+}
+
 input[type="email"], input[type="text"],
-input[type="password"], input:focus {
+input[type="password"], input:focus, input[type="email"]:focus,
+input[type="text"]:focus, input[type="password"]:focus {
   border-bottom: 2px solid white;
   background-color: transparent;
   border-radius: 0;
   border-top: 0;
   border-left: 0;
   border-right: 0;
+  color: white;
+  font-weight: 500;
+}
+
+.input-bg:focus {
+  background-color: transparent;
+}
+
+.input-color {
+  color: white;
 }
 
 #error_explanation:not(:empty) {
