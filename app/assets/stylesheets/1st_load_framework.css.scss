@@ -61,6 +61,11 @@ main {
   margin-top: 30px; // accommodate the navbar
 }
 
+.homepage {
+  @extend .col-md-9;
+  @extend .text-xs-center;
+}
+
 section {
   @extend .row;
   margin-top: 20px;
