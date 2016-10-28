@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
 
-  # post '/search' => 'home#index'
+  post '/search' => 'locations#search'
 end

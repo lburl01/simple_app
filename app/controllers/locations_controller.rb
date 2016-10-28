@@ -1,7 +1,9 @@
 #
-class LocationController < ApplicationController
+class LocationsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:search]
+
   def search
-    # parameters = { term: params[:term], limit: 16 }
-    render json: Yelp.client.search('San Francisco')
+    location = params[:search]
+    render json: Yelp.client.search(location)
   end
 end
