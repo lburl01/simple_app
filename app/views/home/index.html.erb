@@ -1,10 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="homepage">
-      <p>Enter a city below to check for dog-friendly businesses in your area.</p>
-      <form class="" action="/search" method="post">
+      <p>Enter a city and search term below to find businesses in your area.</p>
+      <form class="authform-horizontal" action="/search" method="post">
         <label for="search"></label>
         <input type="text" name="search" placeholder="Raleigh">
+        <label for="term"></label>
+        <input type="text" name="term" placeholder="dog-friendly">
+        <input type="submit" name="submit" class="button right">
       </form>
     </div>
   </div>
