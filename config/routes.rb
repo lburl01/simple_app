@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   authenticated :user do
     root 'home#index', as: :authenticated_root
   end
@@ -7,5 +8,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
 
-  post '/search' => 'home#search'
+  # post '/search' => 'home#index'
 end
