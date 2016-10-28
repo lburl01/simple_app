@@ -4,6 +4,7 @@ class LocationsController < ApplicationController
 
   def search
     location = params[:search]
-    render json: Yelp.client.search(location)
+    dog_friendly = { term: 'dog-friendly' }
+    render json: Yelp.client.search(location, dog_friendly)
   end
 end
