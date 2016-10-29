@@ -1,0 +1,15 @@
+default:
+  host: localhost
+  port: 6379
+
+development:
+  db: 0
+  namespace: simple_app
+
+test:
+  db: 0
+  namespace: simple_app
+
+production:
+  db: 0
+  namespace: simple_app
