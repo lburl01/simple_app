@@ -10,6 +10,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'yelp', require: 'yelp'
 gem 'figaro'
+gem 'redis', '~> 3.3', '>= 3.3.1'
+gem 'redis-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri

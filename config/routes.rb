@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
 
   authenticated :user do
-    root 'home#index', as: :authenticated_root
+    root 'locations#search', as: :authenticated_root
   end
 
   root to: 'visitors#index'
   devise_for :users
   resources :users
 
-  post '/search' => 'locations#search'
+  get '/results' => 'locations#results'
+  post '/search' => 'locations#search_results'
 end
